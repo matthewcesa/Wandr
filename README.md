@@ -14,3 +14,30 @@ Main Features :
   -  Map View: localization of memories on the trip map
   -  Statistics: top meals/activities across all trips, average rating by country, total budget
   - Dashboard: overview of all trips with their key indicators
+
+To run the project, refer to the line "Setup & Running (Development)"
+
+-------
+
+## Architecture
+- **Frontend**: 
+- **Backend**: Spring boot (Java)
+- **Database**: PostreSQL
+  Schema/data documentation: `.sql` + `documents/ .rd`
+
+-------
+
+## Prerequisites
+
+
+### Setup & Running (Development)
+
+#### Prerequisites Setup
+
+-------
+
+## Group Collaboration
+This project is the result of a collaborative effort by a **team of 2 students** from the same college. Working together, we implemented a complete development lifecycle, from initial planning and database schema design to final interfaces and testing. Made by CESA Matthew-Frédérick and NGUYEN Constant. 
+
+
+
