@@ -3,6 +3,7 @@ target/
 # Système
 .DS_Store
 Thumbs.db
+.idea
 
 # Data GTFS
 backend-python/data/
