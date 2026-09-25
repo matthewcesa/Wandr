@@ -3,8 +3,6 @@
 # Compiled output
 /dist
 /tmp
-/out-tsc
-/bazel-out
 
 # Node
 /node_modules
@@ -30,7 +28,6 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
