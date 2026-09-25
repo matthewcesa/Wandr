@@ -4,13 +4,8 @@ services:
     build:
       context: ./wandr-backend
     container_name: wandr-backend
-    environment:
-      DB_HOST: db
-      DB_NAME: wandrdb
-      DB_USER: wandruser
-      DB_PASSWORD: wandrpassword
-      JWT_SECRET: wandrprojectefreiosdev
-      CORS_ORIGINS: http://localhost:5173,http://127.0.0.1:5173
+    env_file:
+      - .env
     ports:
       - "8080:8080"
     depends_on:
@@ -20,6 +15,8 @@ services:
     build:
       context: frontend
     container_name: wandr-frontend
+    env_file:
+      - .env
     ports:
       - "5173:5173"
     volumes:
@@ -32,10 +29,8 @@ services:
     image: postgis/postgis:16-3.4
     container_name: wandr-postgis
     restart: unless-stopped
-    environment:
-      POSTGRES_DB: wandrdb
-      POSTGRES_USER: wandruser
-      POSTGRES_PASSWORD: wandrpassword
+    env_file:
+      - .envv
     ports:
       - "5432:5432"
     volumes:
