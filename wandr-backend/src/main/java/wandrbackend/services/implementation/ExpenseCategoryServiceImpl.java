@@ -1,4 +1,3 @@
-// service/impl/ExpenseCategoryServiceImpl.java
 package wandrbackend.services.implementation;
 
 import org.slf4j.Logger;
