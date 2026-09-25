@@ -1,8 +1,8 @@
 package wandrbackend.entity.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import wandrbackend.entity.User;
+import wandrbackend.entity.Rating;
 
-public interface RatingJPARepository extends CrudRepository<User,Long> {
+public interface RatingJPARepository extends CrudRepository<Rating,Long> {
 
 }

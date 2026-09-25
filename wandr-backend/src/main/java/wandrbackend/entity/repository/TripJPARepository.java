@@ -1,8 +1,8 @@
 package wandrbackend.entity.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import wandrbackend.entity.User;
+import wandrbackend.entity.Trip;
 
-public interface TripJPARepository extends CrudRepository<User,Long> {
+public interface TripJPARepository extends CrudRepository<Trip,Long> {
 
 }

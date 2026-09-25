@@ -1,8 +1,8 @@
 package wandrbackend.entity.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import wandrbackend.entity.User;
+import wandrbackend.entity.Memory;
 
-public interface MemoryJPARepository extends CrudRepository<User,Long> {
+public interface MemoryJPARepository extends CrudRepository<Memory,Long> {
 
 }

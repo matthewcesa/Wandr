@@ -31,4 +31,68 @@ public class Rating {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+    public Long getRatingId() {
+        return ratingId;
+    }
+
+    public void setRatingId(Long ratingId) {
+        this.ratingId = ratingId;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Memory getMemory() {
+        return memory;
+    }
+
+    public void setMemory(Memory memory) {
+        this.memory = memory;
+    }
+
+    public BigDecimal getValueForMoney() {
+        return valueForMoney;
+    }
+
+    public void setValueForMoney(BigDecimal valueForMoney) {
+        this.valueForMoney = valueForMoney;
+    }
+
+    public BigDecimal getAtmosphereAndService() {
+        return atmosphereAndService;
+    }
+
+    public void setAtmosphereAndService(BigDecimal atmosphereAndService) {
+        this.atmosphereAndService = atmosphereAndService;
+    }
+
+    public BigDecimal getQualityOfActivity() {
+        return qualityOfActivity;
+    }
+
+    public void setQualityOfActivity(BigDecimal qualityOfActivity) {
+        this.qualityOfActivity = qualityOfActivity;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }

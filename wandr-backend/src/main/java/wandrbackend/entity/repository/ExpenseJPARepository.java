@@ -1,8 +1,9 @@
 package wandrbackend.entity.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import wandrbackend.entity.User;
+import wandrbackend.entity.Expense;
 
-public interface ExpenseJPARepository extends CrudRepository<User,Long> {
+
+public interface ExpenseJPARepository extends CrudRepository<Expense,Long> {
 
 }
