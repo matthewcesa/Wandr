@@ -37,10 +37,10 @@ public class MemoryController {
         return this.memoryServiceImpl.createMemory(tripId, memory);
     }
 
-    @PutMapping
+    @PutMapping("/{memoryId}")
     @ResponseStatus(HttpStatus.OK)
-    public Memory updateMemory(@PathVariable("tripId") Long tripId, @RequestBody Memory memory){
-        return this.memoryServiceImpl.updateMemory(tripId, memory);
+    public Memory updateMemory(@PathVariable("memoryId") Long memoryId, @RequestBody Memory memory){
+        return this.memoryServiceImpl.updateMemory(memoryId, memory);
     }
 
     @DeleteMapping("/{memoryId}")
