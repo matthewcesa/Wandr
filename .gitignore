@@ -8,5 +8,3 @@ Thumbs.db
 # Data GTFS
 backend-python/data/
 
-# Variable d'environnement
-.env
