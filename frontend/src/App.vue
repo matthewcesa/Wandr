@@ -1,97 +1,119 @@
 <script setup>
-import { ref } from 'vue'
-
-const trips = [
-  { city: 'Lisbonne', country: 'Portugal', date: '12 - 18 juin', color: 'coral', icon: 'L' },
-  { city: 'Kyoto', country: 'Japon', date: '04 - 15 octobre', color: 'teal', icon: 'K' },
-  { city: 'Reykjavik', country: 'Islande', date: '22 - 29 novembre', color: 'blue', icon: 'R' },
-]
-
-const activeTrip = ref(0)
-const showForm = ref(false)
-const search = ref('')
-
-function selectTrip(index) {
-  activeTrip.value = index
-}
+import AppSidebar from './components/AppSidebar.vue'
+import AppTopbar from './components/AppTopbar.vue'
 </script>
 
 <template>
-  <main class="app-shell">
-    <nav class="topbar">
-      <a class="brand" href="#" aria-label="Wandr accueil">
-        <span class="brand-mark">w</span>
-        <span>wandr</span>
-      </a>
-      <div class="nav-links">
-        <a class="nav-link active" href="#voyages">Mes voyages</a>
-        <a class="nav-link" href="#souvenirs">Souvenirs</a>
-        <button class="profile-button" type="button" aria-label="Ouvrir le profil">AM</button>
-      </div>
-    </nav>
+  <div class="mise-en-page">
+    <AppSidebar />
 
-    <section class="hero" id="voyages">
-      <div>
-        <p class="eyebrow">Bonjour, Alex <span class="sun">☀</span></p>
-        <h1>Vos prochaines<br /><em>échappées</em></h1>
-        <p class="hero-copy">Gardez vos itinéraires, vos souvenirs et les petits détails qui rendent chaque voyage unique.</p>
-      </div>
-      <div class="hero-stamp" aria-hidden="true">
-        <span>COLLECT</span>
-        <strong>MEMORIES</strong>
-        <span>✳</span>
-      </div>
-    </section>
-
-    <section class="toolbar" aria-label="Actions sur les voyages">
-      <label class="search-box">
-        <span aria-hidden="true">⌕</span>
-        <input v-model="search" type="search" placeholder="Rechercher un voyage" />
-      </label>
-      <button class="primary-button" type="button" @click="showForm = !showForm">
-        <span>+</span> Nouveau voyage
-      </button>
-    </section>
-
-    <form v-if="showForm" class="trip-form" @submit.prevent="showForm = false">
-      <label>Nom du voyage <input required placeholder="Ex. Un week-end à Rome" /></label>
-      <label>Date de départ <input required type="date" /></label>
-      <button class="primary-button" type="submit">Ajouter</button>
-    </form>
-
-    <section class="trip-section">
-      <div class="section-heading">
-        <h2>Vos voyages <span>{{ trips.length }}</span></h2>
-        <a href="#tous">Voir tout <span>→</span></a>
-      </div>
-      <div class="trip-grid">
-        <button
-          v-for="(trip, index) in trips"
-          :key="trip.city"
-          class="trip-card"
-          :class="[{ selected: activeTrip === index }, trip.color]"
-          type="button"
-          @click="selectTrip(index)"
-        >
-          <span class="trip-icon">{{ trip.icon }}</span>
-          <span class="trip-card-content">
-            <strong>{{ trip.city }}</strong>
-            <small>{{ trip.country }}</small>
-            <small class="trip-date">{{ trip.date }}</small>
-          </span>
-          <span class="card-arrow">↗</span>
-        </button>
-      </div>
-    </section>
-
-    <section class="memory-banner" id="souvenirs">
-      <div>
-        <p class="eyebrow">Votre journal de bord</p>
-        <h2>Un endroit pour<br /><em>ne rien oublier.</em></h2>
-        <button class="text-button" type="button">Ajouter un souvenir <span>→</span></button>
-      </div>
-      <div class="memory-doodle" aria-hidden="true">✦</div>
-      <div class="memory-photo" aria-hidden="true"><span>✈</span></div>
-    </section>
-  </main>
+    <main class="mise-en-page-contenu">
+      <AppTopbar />
+      <router-view />
+    </main>
+  </div>
 </template>
+
+<style>
+:root {
+  --color-bg: #f3eee4;
+  --color-sidebar: #faf7f1;
+  --color-surface: #ffffff;
+  --color-border: #e8e0d1;
+  --color-text: #2b2822;
+  --color-text-muted: #8c8575;
+  --color-accent: #b97a54;
+  --color-accent-dark: #9c6544;
+  --color-accent-tint: #f1e2d5;
+
+  --status-progress-bg: #ece4c8;
+  --status-progress-text: #7a6d3a;
+  --status-done-bg: #dde6d6;
+  --status-done-text: #4d6b41;
+  --status-upcoming-bg: #f4ded0;
+  --status-upcoming-text: #a05a34;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow-card: 0 1px 2px rgba(43, 40, 34, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.contenu-en-attente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+</style>
+
+<style scoped>
+.mise-en-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mise-en-page-contenu {
+  flex: 1;
+  padding: 28px 32px 48px;
+  min-width: 0;
+}
+</style>
