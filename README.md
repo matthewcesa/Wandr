@@ -4,11 +4,11 @@ Wandr is a digital travel journal. It helps users organize trips and keep memori
 
 ## Features
 
-- Create and browse trips with dates, destination, status, budget, and cover image.
+- Create and browse trips with dates, destination, status, budget, and cover image (in process).
 - Add memories to a trip, such as places, meals, activities, or accommodation.
-- Attach photos, tags, and ratings to memories.
+- Attach photos (in process), tags, and ratings to memories.
 - Track trip expenses and their categories.
-- Browse a map, dashboard, and statistics in the web interface. 
+- Browse a map (in process), dashboard, and statistics in the web interface. 
 
 ## Architecture
 
