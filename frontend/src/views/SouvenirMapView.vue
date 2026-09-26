@@ -6,12 +6,12 @@
     </header>
 
     <div class="contenu-en-attente">
-      Carte des souvenirs à venir (carte interactive + liste des étapes...)
+      Intégrer Leaflet ou google maps, mais pour une version finale très poussé
     </div>
   </div>
 </template>
 
-<style scoped>
+<style scoped>  
 .entete-page {
   margin-bottom: 24px;
 }

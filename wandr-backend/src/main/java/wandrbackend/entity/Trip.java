@@ -47,9 +47,11 @@ public class Trip {
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Memory> memories;
 
     @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Expense> expenses;
 
     public Long getTripId() {

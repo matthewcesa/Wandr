@@ -4,7 +4,6 @@ import UserBadgeCard from './UserBadgeCard.vue'
 const navItems = [
   { to: '/', icon: 'table-cells-large', label: 'Tableau de bord' },
   { to: '/voyages', icon: 'book', label: 'Tous les Voyages' },
-  { to: '/voyages/1', icon: 'eye', label: "Détail d'un voyage" },
   { to: '/souvenirs/nouveau', icon: 'bullseye', label: 'Ajouter un Souvenir' },
   { to: '/carte', icon: 'location-dot', label: 'Carte des Souvenirs' },
   { to: '/statistiques', icon: 'chart-line', label: 'Statistiques Globales' }
@@ -13,33 +12,33 @@ const navItems = [
 
 <template>
   <aside class="barre-laterale">
-    <div class="identite-marque">
-      <img src="../assets/LogoWandr.png" alt="Logo Wandr" class="sidebar-logo"/>
+    <div class="barre-laterale-marque">
+      <img src="../assets/LogoWandr.png" alt="Logo Wandr" class="barre-laterale-logo" />
       <div>
-        <p class="nom-marque">Wandr</p>
-        <p class="slogan-marque">Carnets de voyages</p>
+        <p class="barre-laterale-nom">Wandr</p>
+        <p class="barre-laterale-signature">Carnets de voyages</p>
       </div>
     </div>
 
-    <router-link to="/souvenirs/nouveau" class="bouton-creer-voyage">
+    <router-link to="/voyages/nouveau" class="barre-laterale-action">
       <font-awesome-icon icon="plus" />
       <span>Créer un voyage</span>
     </router-link>
 
-    <nav class="navigation-principale">
+    <nav class="barre-laterale-navigation">
       <router-link
         v-for="item in navItems"
         :key="item.to"
         :to="item.to"
-        class="lien-navigation"
-        active-class="lien-navigation--actif"
+        class="barre-laterale-lien"
+        active-class="barre-laterale-lien-actif"
       >
         <font-awesome-icon :icon="item.icon" fixed-width />
         <span>{{ item.label }}</span>
       </router-link>
     </nav>
 
-    <UserBadgeCard class="profil-utilisateur" />
+    <UserBadgeCard class="barre-laterale-utilisateur" />
   </aside>
 </template>
 
@@ -57,36 +56,35 @@ const navItems = [
   flex-direction: column;
 }
 
-.identite-marque {
+.barre-laterale-marque {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 24px;
 }
 
-.sidebar-logo {
+.barre-laterale-logo {
   width: 34px;
   height: 34px;
   border-radius: 9px;
-  object-fit: cover;
   flex-shrink: 0;
 }
 
-.nom-marque {
+.barre-laterale-nom {
   font-family: var(--font-display);
   font-size: 1.05rem;
   color: var(--color-text);
   line-height: 1.1;
 }
 
-.slogan-marque {
+.barre-laterale-signature {
   font-size: 0.62rem;
   letter-spacing: 0.04em;
   color: var(--color-text-muted);
   margin-top: 2px;
 }
 
-.bouton-creer-voyage {
+.barre-laterale-action {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,18 +99,18 @@ const navItems = [
   transition: background 0.15s ease;
 }
 
-.bouton-creer-voyage:hover {
+.barre-laterale-action:hover {
   background: var(--color-accent-dark);
 }
 
-.navigation-principale {
+.barre-laterale-navigation {
   display: flex;
   flex-direction: column;
   gap: 2px;
   flex: 1;
 }
 
-.lien-navigation {
+.barre-laterale-lien {
   display: flex;
   align-items: center;
   gap: 11px;
@@ -123,18 +121,18 @@ const navItems = [
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.lien-navigation:hover {
+.barre-laterale-lien:hover {
   background: var(--color-accent-tint);
   color: var(--color-text);
 }
 
-.lien-navigation--actif {
+.barre-laterale-lien-actif {
   background: var(--color-accent-tint);
   color: var(--color-accent-dark);
   font-weight: 600;
 }
 
-.profil-utilisateur {
+.barre-laterale-utilisateur {
   margin-top: 18px;
 }
 </style>

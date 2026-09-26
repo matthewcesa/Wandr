@@ -1,4 +1,4 @@
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faTableCellsLarge,
   faBook,
@@ -9,7 +9,8 @@ import {
   faPlus,
   faMagnifyingGlass,
   faBell,
-} from '@fortawesome/free-solid-svg-icons';
+  faRightFromBracket
+} from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   faTableCellsLarge,
@@ -21,4 +22,5 @@ library.add(
   faPlus,
   faMagnifyingGlass,
   faBell,
-);
+  faRightFromBracket
+)

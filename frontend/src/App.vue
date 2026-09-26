@@ -1,10 +1,17 @@
 <script setup>
+import { useRoute } from 'vue-router'
 import AppSidebar from './components/AppSidebar.vue'
 import AppTopbar from './components/AppTopbar.vue'
+
+const route = useRoute()
 </script>
 
 <template>
-  <div class="mise-en-page">
+  <div v-if="route.meta.public" class="mise-en-page-authentification">
+    <router-view />
+  </div>
+
+  <div v-else class="mise-en-page">
     <AppSidebar />
 
     <main class="mise-en-page-contenu">
@@ -109,6 +116,14 @@ input:focus-visible {
 .mise-en-page {
   display: flex;
   min-height: 100vh;
+}
+
+.mise-en-page-authentification {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
 }
 
 .mise-en-page-contenu {

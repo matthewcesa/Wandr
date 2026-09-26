@@ -16,12 +16,10 @@ public class Expense {
 
     @ManyToOne
     @JoinColumn(name = "trip_id", nullable = false)
-    @JsonIgnore
     private Trip trip;
 
     @ManyToOne
     @JoinColumn(name = "memory_id")
-    @JsonIgnore
     private Memory memory;
 
     @ManyToOne

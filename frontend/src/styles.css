@@ -15,49 +15,49 @@ button, input { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 a { color: inherit; text-decoration: none; }
 
-.app-shell { max-width: 1180px; margin: auto; padding: 0 54px 72px; }
-.topbar { height: 94px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ddd7cc; }
-.brand { display: flex; align-items: center; gap: 9px; font-size: 22px; font-weight: 700; letter-spacing: -.06em; }
-.brand-mark { display: grid; width: 30px; height: 30px; place-items: center; color: #f5f1ea; background: #ec684c; border-radius: 50%; font-family: 'Playfair Display', serif; font-size: 22px; font-style: italic; }
-.nav-links { display: flex; align-items: center; gap: 31px; font-size: 13px; font-weight: 600; }
-.nav-link { padding: 12px 0; color: #7d8580; }
-.nav-link.active { color: #243433; border-bottom: 2px solid #ec684c; }
-.profile-button { border: 0; width: 36px; height: 36px; color: #fff; background: #315f5b; border-radius: 50%; font-size: 11px; font-weight: 700; cursor: pointer; }
-.hero { display: flex; justify-content: space-between; align-items: end; padding: 76px 0 62px; }
-.eyebrow { margin: 0 0 17px; color: #83908a; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-.sun { margin-left: 5px; color: #e5a34f; font-size: 15px; }
+.conteneur-application { max-width: 1180px; margin: auto; padding: 0 54px 72px; }
+.barre-superieure { height: 94px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ddd7cc; }
+.marque { display: flex; align-items: center; gap: 9px; font-size: 22px; font-weight: 700; letter-spacing: -.06em; }
+.symbole-marque { display: grid; width: 30px; height: 30px; place-items: center; color: #f5f1ea; background: #ec684c; border-radius: 50%; font-family: 'Playfair Display', serif; font-size: 22px; font-style: italic; }
+.liens-navigation { display: flex; align-items: center; gap: 31px; font-size: 13px; font-weight: 600; }
+.lien-navigation { padding: 12px 0; color: #7d8580; }
+.lien-navigation.actif { color: #243433; border-bottom: 2px solid #ec684c; }
+.bouton-profil { border: 0; width: 36px; height: 36px; color: #fff; background: #315f5b; border-radius: 50%; font-size: 11px; font-weight: 700; cursor: pointer; }
+.introduction { display: flex; justify-content: space-between; align-items: end; padding: 76px 0 62px; }
+.surtitre { margin: 0 0 17px; color: #83908a; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.soleil { margin-left: 5px; color: #e5a34f; font-size: 15px; }
 h1, h2, p { margin-top: 0; }
 h1 { margin-bottom: 22px; color: #26403d; font-size: clamp(48px, 7vw, 78px); font-weight: 500; letter-spacing: -.065em; line-height: .94; }
 em { color: #df654d; font-family: 'Playfair Display', serif; font-weight: 600; }
-.hero-copy { max-width: 370px; margin-bottom: 0; color: #7e8983; font-size: 14px; line-height: 1.7; }
-.hero-stamp { display: flex; width: 132px; height: 132px; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: #e5a34f; border: 1px solid #e5a34f; border-radius: 50%; font-size: 9px; letter-spacing: .2em; transform: rotate(12deg); }
-.hero-stamp strong { color: #df654d; font-size: 15px; letter-spacing: .08em; }
-.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 39px; }
-.search-box { display: flex; align-items: center; gap: 12px; width: 285px; padding: 11px 15px; border-bottom: 1px solid #b9c0ba; color: #89938d; }
-.search-box input { width: 100%; border: 0; outline: 0; color: #243433; background: transparent; font-size: 13px; }
-.primary-button { display: inline-flex; align-items: center; gap: 9px; padding: 12px 18px; color: #fff; background: #315f5b; border: 0; border-radius: 4px; font-size: 12px; font-weight: 700; cursor: pointer; }
-.primary-button span { font-size: 19px; font-weight: 400; line-height: .6; }
-.trip-form { display: flex; align-items: end; gap: 16px; margin: -10px 0 38px; padding: 20px; background: #ebe5db; border-radius: 5px; }
-.trip-form label { display: grid; gap: 7px; color: #6c7871; font-size: 11px; font-weight: 700; }
-.trip-form input { padding: 10px; border: 1px solid #cbd0ca; border-radius: 3px; color: #243433; background: #f8f5ef; outline: none; }
-.trip-section { padding: 0 0 74px; }
-.section-heading { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 19px; }
-.section-heading h2 { margin: 0; color: #2c4642; font-size: 20px; letter-spacing: -.04em; }
-.section-heading h2 span { margin-left: 6px; color: #c3c5bd; font-size: 12px; font-weight: 500; vertical-align: top; }
-.section-heading a { color: #77837d; font-size: 12px; font-weight: 700; }
-.section-heading a span, .text-button span { margin-left: 8px; color: #df654d; font-size: 17px; }
-.trip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
-.trip-card { position: relative; display: flex; min-height: 183px; flex-direction: column; align-items: start; justify-content: space-between; padding: 20px; border: 1px solid transparent; border-radius: 4px; text-align: left; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
-.trip-card:hover, .trip-card.selected { transform: translateY(-3px); box-shadow: 0 11px 25px #334b3a18; }
-.trip-card.selected { border-color: #315f5b; }
-.trip-card.coral { background: #edc7ad; }.trip-card.teal { background: #bad5cc; }.trip-card.blue { background: #c2d5d9; }
-.trip-icon { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid #597269; border-radius: 50%; color: #315f5b; font-family: 'Playfair Display', serif; font-size: 16px; font-style: italic; }
-.trip-card-content { display: grid; gap: 3px; }.trip-card strong { color: #29413d; font-size: 21px; font-weight: 600; letter-spacing: -.05em; }.trip-card small { color: #58716b; font-size: 11px; }.trip-date { margin-top: 8px; color: #879890 !important; }.card-arrow { position: absolute; right: 20px; bottom: 20px; color: #315f5b; font-size: 22px; }
-.memory-banner { display: flex; min-height: 245px; align-items: center; justify-content: space-between; overflow: hidden; padding: 40px 58px; color: #f6f0e7; background: #315f5b; border-radius: 4px; }
-.memory-banner .eyebrow { color: #a8c2b8; }.memory-banner h2 { margin-bottom: 26px; font-size: 38px; font-weight: 500; letter-spacing: -.06em; line-height: .97; }.memory-banner em { color: #f0a16b; }
-.text-button { padding: 0; border: 0; color: #f6f0e7; background: none; font-size: 12px; font-weight: 700; cursor: pointer; }.memory-doodle { color: #e5a34f; font-size: 72px; transform: rotate(18deg); }.memory-photo { display: grid; width: 155px; height: 190px; place-items: center; border: 8px solid #e8c9a6; background: #e37b59; transform: rotate(7deg); }.memory-photo span { color: #f8d8aa; font-size: 60px; transform: rotate(-17deg); }
+.texte-introduction { max-width: 370px; margin-bottom: 0; color: #7e8983; font-size: 14px; line-height: 1.7; }
+.sceau-introduction { display: flex; width: 132px; height: 132px; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: #e5a34f; border: 1px solid #e5a34f; border-radius: 50%; font-size: 9px; letter-spacing: .2em; transform: rotate(12deg); }
+.sceau-introduction strong { color: #df654d; font-size: 15px; letter-spacing: .08em; }
+.barre-outils { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 39px; }
+.champ-recherche { display: flex; align-items: center; gap: 12px; width: 285px; padding: 11px 15px; border-bottom: 1px solid #b9c0ba; color: #89938d; }
+.champ-recherche input { width: 100%; border: 0; outline: 0; color: #243433; background: transparent; font-size: 13px; }
+.bouton-principal { display: inline-flex; align-items: center; gap: 9px; padding: 12px 18px; color: #fff; background: #315f5b; border: 0; border-radius: 4px; font-size: 12px; font-weight: 700; cursor: pointer; }
+.bouton-principal span { font-size: 19px; font-weight: 400; line-height: .6; }
+.formulaire-voyage { display: flex; align-items: end; gap: 16px; margin: -10px 0 38px; padding: 20px; background: #ebe5db; border-radius: 5px; }
+.formulaire-voyage label { display: grid; gap: 7px; color: #6c7871; font-size: 11px; font-weight: 700; }
+.formulaire-voyage input { padding: 10px; border: 1px solid #cbd0ca; border-radius: 3px; color: #243433; background: #f8f5ef; outline: none; }
+.section-voyages { padding: 0 0 74px; }
+.entete-section { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 19px; }
+.entete-section h2 { margin: 0; color: #2c4642; font-size: 20px; letter-spacing: -.04em; }
+.entete-section h2 span { margin-left: 6px; color: #c3c5bd; font-size: 12px; font-weight: 500; vertical-align: top; }
+.entete-section a { color: #77837d; font-size: 12px; font-weight: 700; }
+.entete-section a span, .bouton-texte span { margin-left: 8px; color: #df654d; font-size: 17px; }
+.grille-voyages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+.carte-voyage { position: relative; display: flex; min-height: 183px; flex-direction: column; align-items: start; justify-content: space-between; padding: 20px; border: 1px solid transparent; border-radius: 4px; text-align: left; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+.carte-voyage:hover, .carte-voyage.selectionnee { transform: translateY(-3px); box-shadow: 0 11px 25px #334b3a18; }
+.carte-voyage.selectionnee { border-color: #315f5b; }
+.carte-voyage.corail { background: #edc7ad; }.carte-voyage.sarcelle { background: #bad5cc; }.carte-voyage.bleu { background: #c2d5d9; }
+.icone-voyage { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid #597269; border-radius: 50%; color: #315f5b; font-family: 'Playfair Display', serif; font-size: 16px; font-style: italic; }
+.contenu-carte-voyage { display: grid; gap: 3px; }.carte-voyage strong { color: #29413d; font-size: 21px; font-weight: 600; letter-spacing: -.05em; }.carte-voyage small { color: #58716b; font-size: 11px; }.date-voyage { margin-top: 8px; color: #879890 !important; }.fleche-carte { position: absolute; right: 20px; bottom: 20px; color: #315f5b; font-size: 22px; }
+.bandeau-souvenirs { display: flex; min-height: 245px; align-items: center; justify-content: space-between; overflow: hidden; padding: 40px 58px; color: #f6f0e7; background: #315f5b; border-radius: 4px; }
+.bandeau-souvenirs .surtitre { color: #a8c2b8; }.bandeau-souvenirs h2 { margin-bottom: 26px; font-size: 38px; font-weight: 500; letter-spacing: -.06em; line-height: .97; }.bandeau-souvenirs em { color: #f0a16b; }
+.bouton-texte { padding: 0; border: 0; color: #f6f0e7; background: none; font-size: 12px; font-weight: 700; cursor: pointer; }.illustration-souvenir { color: #e5a34f; font-size: 72px; transform: rotate(18deg); }.photo-souvenir { display: grid; width: 155px; height: 190px; place-items: center; border: 8px solid #e8c9a6; background: #e37b59; transform: rotate(7deg); }.photo-souvenir span { color: #f8d8aa; font-size: 60px; transform: rotate(-17deg); }
 
 @media (max-width: 700px) {
-	.app-shell { padding: 0 22px 42px; }.topbar { height: 75px; }.nav-links { gap: 12px; }.nav-link { display: none; }
-	.hero { align-items: start; padding: 55px 0 43px; }.hero-stamp { width: 90px; height: 90px; flex-shrink: 0; font-size: 6px; }.hero-stamp strong { font-size: 10px; }.hero-copy { font-size: 13px; }.trip-grid { grid-template-columns: 1fr; }.toolbar { align-items: stretch; flex-direction: column; }.search-box { width: 100%; }.primary-button { justify-content: center; }.trip-form { align-items: stretch; flex-direction: column; }.memory-banner { min-height: 300px; padding: 31px; }.memory-banner h2 { font-size: 31px; }.memory-doodle { display: none; }.memory-photo { width: 95px; height: 125px; flex-shrink: 0; border-width: 5px; }.memory-photo span { font-size: 39px; }
+	.conteneur-application { padding: 0 22px 42px; }.barre-superieure { height: 75px; }.liens-navigation { gap: 12px; }.lien-navigation { display: none; }
+	.introduction { align-items: start; padding: 55px 0 43px; }.sceau-introduction { width: 90px; height: 90px; flex-shrink: 0; font-size: 6px; }.sceau-introduction strong { font-size: 10px; }.texte-introduction { font-size: 13px; }.grille-voyages { grid-template-columns: 1fr; }.barre-outils { align-items: stretch; flex-direction: column; }.champ-recherche { width: 100%; }.bouton-principal { justify-content: center; }.formulaire-voyage { align-items: stretch; flex-direction: column; }.bandeau-souvenirs { min-height: 300px; padding: 31px; }.bandeau-souvenirs h2 { font-size: 31px; }.illustration-souvenir { display: none; }.photo-souvenir { width: 95px; height: 125px; flex-shrink: 0; border-width: 5px; }.photo-souvenir span { font-size: 39px; }
 }
