@@ -76,6 +76,7 @@ CREATE TABLE ratings (
                          memory_id INTEGER NOT NULL REFERENCES memories(memory_id) ON DELETE CASCADE,
                          value_for_money DECIMAL(2, 1),
                          atmosphere_and_service DECIMAL(2, 1),
+
                          quality_of_activity DECIMAL(2, 1),
                          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                          updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -96,3 +97,8 @@ INSERT INTO expenses_categories (name, icon) VALUES
                                                  ('Activity', '🎯'),
                                                  ('Transportation', '🚗'),
                                                  ('Accommodation', '🏨');
+
+INSERT INTO users (name, email)VALUES (
+                            'Matthew Cesa',
+                            'matthewcesa@gmail.com'
+                         )

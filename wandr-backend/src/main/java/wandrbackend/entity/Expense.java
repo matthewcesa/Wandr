@@ -30,8 +30,8 @@ public class Expense {
     @Column(nullable = false)
     private BigDecimal amount;
 
-    @Column(columnDefinition = "VARCHAR(3) DEFAULT 'EUR'")
-    private String currency;
+    @Column(nullable = false, length = 50)
+    private String currency = "EUR";
 
     private LocalDateTime spentAt;
 
