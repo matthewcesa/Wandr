@@ -36,7 +36,7 @@ public class TripController {
     }
 
     @PostMapping("/user/{userId}")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public Trip createTrip(@PathVariable("userId") Long userId, @RequestBody Trip trip){
         return this.tripServiceImpl.createTrip(userId, trip);
     }

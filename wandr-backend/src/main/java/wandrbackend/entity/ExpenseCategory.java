@@ -1,6 +1,6 @@
 package wandrbackend.entity;
 
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -17,6 +17,7 @@ public class ExpenseCategory {
     private String icon;
 
     @OneToMany(mappedBy = "expenseCategory")
+    @JsonIgnore
     private List<Expense> expenses;
 
 
