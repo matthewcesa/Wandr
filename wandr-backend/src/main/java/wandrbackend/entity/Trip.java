@@ -1,5 +1,6 @@
 package wandrbackend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.*;
@@ -20,6 +21,7 @@ public class Trip {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonIgnore
     private User user;
 
     @Column(nullable = false)
@@ -33,8 +35,8 @@ public class Trip {
     private String cover;
     private BigDecimal plannedBudget;
 
-    @Column(columnDefinition = "VARCHAR(50) DEFAULT 'planned'")
-    private String status;
+    @Column(nullable = false, length = 50)
+    private String status = "planned";
 
     private BigDecimal rating;
 

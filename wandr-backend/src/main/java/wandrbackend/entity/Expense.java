@@ -1,5 +1,6 @@
 package wandrbackend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.*;
@@ -15,10 +16,12 @@ public class Expense {
 
     @ManyToOne
     @JoinColumn(name = "trip_id", nullable = false)
+    @JsonIgnore
     private Trip trip;
 
     @ManyToOne
     @JoinColumn(name = "memory_id")
+    @JsonIgnore
     private Memory memory;
 
     @ManyToOne
@@ -30,8 +33,8 @@ public class Expense {
     @Column(nullable = false)
     private BigDecimal amount;
 
-    @Column(columnDefinition = "VARCHAR(3) DEFAULT 'EUR'")
-    private String currency;
+    @Column(nullable = false, length = 50)
+    private String currency = "EUR";
 
     private LocalDateTime spentAt;
 

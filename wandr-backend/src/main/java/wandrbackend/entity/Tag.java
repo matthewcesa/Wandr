@@ -1,5 +1,6 @@
 package wandrbackend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.*;
@@ -14,6 +15,7 @@ public class Tag {
 
     @ManyToOne
     @JoinColumn(name = "memory_id", nullable = false)
+    @JsonIgnore
     private Memory memory;
 
     @Column(nullable = false)

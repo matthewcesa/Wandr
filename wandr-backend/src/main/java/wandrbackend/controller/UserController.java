@@ -28,12 +28,12 @@ public class UserController {
 
     @GetMapping("/{userId}")
     @ResponseStatus(HttpStatus.OK)
-    public User getUserById(@PathVariable("UserId") Long userId){
+    public User getUserById(@PathVariable("userId") Long userId){
         return this.userServiceImpl.getUserById(userId);
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public User createUser(@RequestBody User user){
         return this.userServiceImpl.createUser(user);
     }
@@ -44,7 +44,7 @@ public class UserController {
         return this.userServiceImpl.updateUser(userId, user);
     }
 
-    @DeleteMapping("/{userId")
+    @DeleteMapping("/{userId}")
     @ResponseStatus(HttpStatus.OK)
     public void deleteUser(@PathVariable("userId") Long userId){
         this.userServiceImpl.deleteUser(userId);

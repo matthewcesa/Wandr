@@ -1,5 +1,6 @@
 package wandrbackend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
@@ -12,6 +13,7 @@ public class Photo {
 
     @ManyToOne
     @JoinColumn(name = "memory_id", nullable = false)
+    @JsonIgnore
     private Memory memory;
 
     @Column(nullable = false)
