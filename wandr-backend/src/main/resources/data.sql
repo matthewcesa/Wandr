@@ -22,7 +22,7 @@ SELECT
         DATE '2026-06-12',
         DATE '2026-06-18',
         'Voyage de demonstration pour tester les endpoints Wandr.',
-        'https://images.unsplash.com/photo-1555881400-74d7aca?auto=format&fit=crop&w=1200&q=80',
+        '/images/lisbonne.jpg',
         850.00,
         'planned',
         4.5,
@@ -63,7 +63,7 @@ WHERE u.email = 'matthewcesa@gmail.com'
 INSERT INTO photos (memory_id, url, caption, taken_at, position)
 SELECT
         m.memory_id,
-        'https://images.unsplash.com/photo-1555881400-74d7aca?auto=format&fit=crop&w=1200&q=80',
+        '/images/alfama.jpg',
         'Les rues de l Alfama',
         TIMESTAMP '2026-06-13 14:30:00',
         1
